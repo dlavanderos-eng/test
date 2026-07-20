@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.94b8721e.css","mappings":"AAAA,cAAc,CACd,oBAAoB,CACpB,mBAAmB,CAGnB,oCAAoC","sources":["index.css"],"sourcesContent":["@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n/* Forzamos a Tailwind v4 a escanear tus archivos JSX */\n@source \"./src/**/*.{js,jsx,ts,tsx}\";"],"names":[],"sourceRoot":""}

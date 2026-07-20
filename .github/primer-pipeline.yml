@@ -1,0 +1,19 @@
+name: Primer Pipeline Práctico
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  verificacion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Saludo en la terminal
+        run: echo "¡Hola mundo! El pipeline se está ejecutando correctamente."
+
+      - name: Mostrar archivos del repositorio
+        run: ls -la

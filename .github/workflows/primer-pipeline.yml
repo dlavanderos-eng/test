@@ -3,6 +3,8 @@ name: Primer Pipeline Práctico
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ] #se activara cuando alguien abra una pr hacia el main
 
 jobs:
   verificacion:

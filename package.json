@@ -1,9 +1,9 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "homepage": "https://dlavanderos-eng.github.io/test",
-  "description": "��#\u0000 \u0000t\u0000e\u0000s\u0000t\u0000\r\u0000 \u0000#\u0000#\u0000N\u0000o\u0000t\u0000a\u0000 \u0000d\u0000e\u0000 \u0000r\u0000a\u0000m\u0000a\u0000 \u0000d\u0000e\u0000 \u0000p\u0000r\u0000u\u0000e\u0000b\u0000a\u0000",
+  "description": "Proyecto React con automatizacion de pruebas y despliegue continuo",
   "main": "index.js",
+  "homepage": "https://dlavanderos-eng.github.io/test",
   "scripts": {
     "test": "react-scripts test --watchAll=false",
     "build": "react-scripts build"
@@ -15,11 +15,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/dlavanderos-eng/test/issues"
   },
-  "homepage": "https://github.com/dlavanderos-eng/test#readme",
   "dependencies": {
     "react": "^19.2.7",
     "react-dom": "^19.2.7",

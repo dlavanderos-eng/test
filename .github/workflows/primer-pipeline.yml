@@ -28,5 +28,5 @@ jobs:
           
       - name: Desplegar a producción
         if: matrix.node-version == '22'  ## Solo se ejecutará en la versión 22
-        run: echo "Desplegando a producción con Node.js ${{ matrix.node-version
+        run: echo "Desplegando a producción con exito en el servidor"
         

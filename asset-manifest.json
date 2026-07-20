@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/dlavanderos-eng/test/static/js/main.d7e849bf.js",
-    "index.html": "/dlavanderos-eng/test/index.html",
-    "main.d7e849bf.js.map": "/dlavanderos-eng/test/static/js/main.d7e849bf.js.map"
+    "main.js": "/test/static/js/main.d7e849bf.js",
+    "index.html": "/test/index.html",
+    "main.d7e849bf.js.map": "/test/static/js/main.d7e849bf.js.map"
   },
   "entrypoints": [
     "static/js/main.d7e849bf.js"

@@ -26,7 +26,7 @@ jobs:
       - name: Configurar Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}  
+          node-version: '24' # Usamos la misma versión que instalaste en tu PC 
           
       - name: Desplegar a producción
         if: matrix.node-version == '22'  ## Solo se ejecutará en la versión 22

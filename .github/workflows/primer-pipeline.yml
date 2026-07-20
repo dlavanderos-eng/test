@@ -1,43 +1,36 @@
-name: Primer Pipeline Práctico
+name: Node.js CI/CD
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ] #se activara cuando alguien abra una pr hacia el main
+    branches: [ main, master ] # Se activa al empujar cambios a estas ramas
+
+permissions:
+  contents: write # Permiso crucial para que GitHub Actions pueda publicar la página por ti
 
 jobs:
-  verificacion:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18, 20, 22] ## Definimos las tres versiones que queremos probar
 
     steps:
-      - name: Descargar el código
+      - name: Descargar código del repositorio 
         uses: actions/checkout@v4
 
-      - name: Saludo en la terminal
-        run: echo "¡Hola mundo! El pipeline se está ejecutando correctamente."
-
-      - name: Mostrar archivos del repositorio
-        run: ls -la
-
-      - name: Configurar Node.js ${{ matrix.node-version }}
+      - name: Configurar Node.js 
         uses: actions/setup-node@v4
         with:
-          node-version: '24' # Usamos la misma versión que instalaste en tu PC 
-      
-      - name: Instalar dependencias de React
+          node-version: '24'
+
+      - name: Instalar dependencias de React 
         run: npm ci
 
-      - name: Ejecutar pruebas unitarias 
-        run: npm test
+      - name: Ejecutar pruebas automatizadas 
+        run: npm run test
 
-      - name: Compilar el proyecto
+      - name: Compilar el proyecto 
         run: npm run build
 
-      - name: Desplegar a producción
-        if: matrix.node-version == '22'  ## Solo se ejecutará en la versión 22
-        run: echo "Desplegando a producción con exito en el servidor"
-        
+      - name: Desplegar en GitHub Pages 
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # La carpeta que genera React con tu app optimizada
+          branch: gh-pages # La rama especial donde se guardará la web pública

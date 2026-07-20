@@ -7,6 +7,9 @@ on:
 jobs:
   verificacion:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20, 22] ## Definimos las tres versiones que queremos probar
 
     steps:
       - name: Descargar el código
@@ -17,3 +20,8 @@ jobs:
 
       - name: Mostrar archivos del repositorio
         run: ls -la
+
+      - name: Configurar Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}  

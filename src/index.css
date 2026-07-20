@@ -1,3 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@source "./**/*.{js,jsx,ts,tsx}";
+/* Forzamos a Tailwind v4 a escanear tus archivos JSX */
+@source "./src/**/*.{js,jsx,ts,tsx}";

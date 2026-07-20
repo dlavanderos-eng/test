@@ -31,6 +31,9 @@ jobs:
       - name: Instalar dependencias de React
         run: npm ci
 
+      - name: Ejecutar pruebas unitarias 
+        run: npm test
+
       - name: Compilar el proyecto
         run: npm run build
 
